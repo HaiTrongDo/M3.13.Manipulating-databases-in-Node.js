@@ -30,6 +30,7 @@ const server = http.createServer(async (req, res) => {
             const data = Buffer.concat(buffers).toString();
             const userData = JSON.parse(data);
             const sql = `INSERT INTO customer(name, address) VALUES ('${userData.name}', '${userData.address}');`;
+            console.log(sql);
             connection.query(sql, (err, results, fields) => {
                 if (err) throw err;
                 res.end("Success");

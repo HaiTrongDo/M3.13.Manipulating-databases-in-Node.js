@@ -15,7 +15,9 @@ connection.connect(function (err) {
     }
     else {
         console.log("connect success");
-        const sql = "CREATE TABLE IF NOT EXISTS products (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,name varchar(30) not null, price INT NOT NULL)";
+        const sql = "CREATE TABLE IF NOT EXISTS products (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT," +
+                    " name varchar(30) not null, " +
+                    "price INT NOT NULL)";
         connection.query(sql, function (err) {
             if (err) {
                 console.log(err);

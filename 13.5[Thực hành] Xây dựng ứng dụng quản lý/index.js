@@ -9,6 +9,7 @@ const connection = mysql.createConnection({
     charset: 'utf8_general_ci'
 });
 
+
 connection.connect(function (err) {
     if (err) {
         throw err.stack;
